@@ -30,9 +30,9 @@
          </div>
          <div>
             <div class="buttons">
-               <button>About me</button>
-               <button>Experience</button>
-               <button>Recommended</button>
+               <button onclick="handleActiveButton(this)">About me</button>
+               <button onclick="handleActiveButton(this)">Experience</button>
+               <button onclick="handleActiveButton(this)">Recommended</button>
             </div>
             <p>
                Hello! I’m Dave, your sales rep here from Salesforce. I’ve been 
@@ -49,12 +49,29 @@
          <div>
             <h2>Gallery</h2>
             <div class="control-btns">
-               <button>+ ADD IMAGE</button>
-               <button></button>
-               <button></button>
+               <button class="add-image" onclick="HandleAddImage()">+ ADD IMAGE</button>
+               <button>
+                  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M1 7.99999H15.1944" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M8 15L1 8L8 1" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </button>
+               <button>
+                  <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15.1945 8.00001L1.00001 8.00001" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     <path d="M8.19446 1L15.1945 8L8.19446 15" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </button>
+               <input type="file" id="image-input" accept="image/*" hidden>
+            </div>
+            <div class="gallery-images">
+               <img src="/Assets/Gallery.jpg" alt="">
+               <img src="/Assets/Gallery.jpg" alt="">
+               <img src="/Assets/Gallery.jpg" alt="">
             </div>
          </div>
       </section>
    </main>
+   <script src="/main.js"></script>
 </body>
 </html>
