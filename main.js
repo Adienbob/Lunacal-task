@@ -10,13 +10,14 @@ function handleActiveButton(buttonId) {
 // Add Image function 
 function handleAddImage() {
     const input = document.getElementById("image-input")
-    
+    const index = document.querySelector(".gallery-images").children.length;
     input.onchange = (event) => {
         const file = event.target.files[0]
         if (file) {
             const imageURL = URL.createObjectURL(file)
             const newImage = document.createElement("img")
             newImage.src = imageURL
+            newImage.alt = `image ${index + 1}`
             document.querySelector(".gallery-images").append(newImage)
         }
 
