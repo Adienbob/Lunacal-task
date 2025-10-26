@@ -139,7 +139,6 @@ img {
 .gallery .gallery-content {
    margin-left: 17px;
    width: 100%;
-   overflow: hidden;
 }
 
 .gallery .gallery-content .head {
@@ -168,10 +167,19 @@ img {
    width: 45px;
    height: 45px;
    border-radius: 50%;
-   box-shadow: 4px 5px 30px 5px #101213;
-   box-shadow: -5px -3px 30px -10px #96BEE7;
+   box-shadow: 
+   4px 5px 30px 5px rgba(16, 18, 19, 1),
+   -5px -3px 30px -10px rgba(150, 190, 231, 1);
    border: none;
    background-image: linear-gradient(139.14deg, #303439 12.4%, #161718 94.96%);
+}
+
+.gallery .head .arrow:hover {
+   opacity: 0.7;
+}
+
+.gallery .head .arrow:active {
+   background-image: linear-gradient(139.14deg, #484e55 12.4%, #282a2c 94.96%)
 }
 
 .add-image {
@@ -199,10 +207,13 @@ img {
    gap: 18px;
 }
 
+.galleryContainer {
+   overflow: hidden;
+}
+
 .gallery-images {
    width: 100%;
    max-width: 612px;
-   overflow: hidden;
    display: flex;
    gap: 21px;
    transition: transform 0.4s ease;

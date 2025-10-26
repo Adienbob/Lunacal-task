@@ -69,15 +69,15 @@
             <div class="head">
                <h2>Gallery</h2>
                <div class="control-btns">
-                  <button class="add-image" onclick="HandleAddImage()">+ ADD IMAGE</button>
+                  <button class="add-image" onclick="handleAddImage()">+ ADD IMAGE</button>
                   <div class="arrows-btns">
-                     <button class="arrow">
+                     <button class="arrow" id="left-arrow">
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M1 7.99999H15.1944" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                            <path d="M8 15L1 8L8 1" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                      </button>
-                     <button class="arrow">
+                     <button class="arrow" id="right-arrow">
                         <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M15.1945 8.00001L1.00001 8.00001" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                            <path d="M8.19446 1L15.1945 8L8.19446 15" stroke="#6F787C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -87,10 +87,12 @@
                   </div>
                </div>
             </div>
-            <div class="gallery-images">
-               <img src="/Assets/Gallery.jpg" alt="">
-               <img src="/Assets/Gallery.jpg" alt="">
-               <img src="/Assets/Gallery.jpg" alt="">
+            <div class="galleryContainer">
+               <div class="gallery-images">
+                  <img src="/Assets/Gallery.jpg" alt="">
+                  <img src="/Assets/Gallery.jpg" alt="">
+                  <img src="/Assets/Gallery.jpg" alt="">
+               </div>
             </div>
          </div>
       </section>

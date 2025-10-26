@@ -8,7 +8,7 @@ function handleActiveButton(buttonId) {
 }
 
 // Add Image function 
-function HandleAddImage() {
+function handleAddImage() {
     const input = document.getElementById("image-input")
     
     input.onchange = (event) => {
@@ -25,3 +25,38 @@ function HandleAddImage() {
     input.click()
 }
 
+// Left and right arrows functions
+function handleArrows() {
+    const rightArrow = document.getElementById("right-arrow");
+    const leftArrow = document.getElementById("left-arrow");
+    const gallery = document.querySelector(".gallery-images");
+
+
+    let index = 0;
+    const visibleCount = 3;
+    const imageWidth = 211;
+    
+    function updateGallery() {
+        gallery.style.transform = `translateX(-${index * imageWidth}px)`
+    }
+
+    rightArrow.addEventListener("click", () => {
+        const total = gallery.children.length;
+        console.log(total)
+        if ( index < total - visibleCount ) {
+            index++;
+            updateGallery()
+            console.log("...")
+        } 
+    })
+
+    leftArrow.addEventListener('click', () => {
+        const total = gallery.children.length;
+        if (index > 0) {
+            index--;
+            updateGallery();
+        }
+    });
+
+}
+window.addEventListener("DOMContentLoaded", handleArrows);
