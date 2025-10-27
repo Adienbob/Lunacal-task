@@ -25,12 +25,13 @@ main {
    align-items: center;
    width: 100%;
    height: 100%;
+   min-height: 100vh;
    padding: 10% 5%; 
    background-color: #1a1c20;
 }
 
 section {
-   width: 720px;
+   width: clamp(330px, 330px + calc(100vw - 360px) * 0.95588, 720px);
    display: flex;
    background-color: #363C43;
    box-shadow: 5.67px 5.67px 3.78px 0 rgba(0, 0, 0, 0.4);
@@ -41,7 +42,7 @@ section {
 section::before {
    content: "";
    position: absolute;
-   width: 612px;
+   width: clamp(252px, 252px + calc(100vw - 360px) * 0.88235, 612px);
    height: 4px;
    border-radius: 2.46px;
    background: linear-gradient(180deg, rgba(40, 40, 40, 0.1) 0%, rgba(248, 248, 248, 0.1) 100%),
@@ -56,8 +57,13 @@ section::before {
 aside {
    display: grid;
    align-content: space-between;
-   height: 159.69px;
-   width: 24px;
+   height: clamp(109.69px, 109.69px + calc(100vw - 360px) * 0.122549, 159.69px);
+   margin-right: clamp(12px, 12px + calc(100vw - 360px) * 0.0122549, 17px);
+   width: fit-content;
+}
+
+aside svg {
+   width: clamp(15px, 15px + calc(100vw - 360px) * 0.02205, 24px);
 }
 
 img {
@@ -66,12 +72,13 @@ img {
 }
 
 .introduction {
-   padding: 17px 56px 27px 12px;
+   padding: 
+   clamp(15px, 15px + calc(100vw - 360px) * 0.004901, 17px) 
+   clamp(27px, 27px + calc(100vw - 360px) * 0.071078, 56px) 
+   clamp(17px, 17px + calc(100vw - 360px) * 0.02450, 27px) 
+   12px
+   ;
    margin-bottom: 41px;
-}
-
-.introduction aside {
-   margin-right: 17px;
 }
 
 .introduction .buttons {
@@ -81,7 +88,12 @@ img {
    gap: 6px;
    justify-content: space-between;
    margin-bottom: 35px;
-   padding: 6px 11px 7px 6px;
+   padding: 
+   6px
+   clamp(6px, 6px + calc(100vw - 360px) * 0.01225, 11px) 
+   7px
+   6px
+   ;
 }
 
 .introduction .buttons button {
@@ -89,16 +101,16 @@ img {
    border: 0;
    background-color: transparent;
    color: #A3ADB2;
-   font-size: 18px;
+   font-size: clamp(8px, 8px + calc(100vw - 360px) * 0.02450, 18px);
    font-weight: 500;
-   width: 195px;
-   height: 49px;
+   width: clamp(75px, 75px + calc(100vw - 360px) * 0.294117, 195px);
+   height: clamp(25px, 25px + calc(100vw - 360px) * 0.058823, 49px);
    border-radius: 16px;
 }
 
 .introduction .buttons .active {
    color: #FFFFFF;
-   font-size: 18px;
+   font-size: clamp(9px, 9px + calc(100vw - 360px) * 0.02205, 18px) ;
    line-height: 16.12px;
    background-color: #28292f;
    box-shadow:
@@ -108,10 +120,10 @@ img {
 
 .introduction div p {
    position: relative;
-   width: 611px;
-   font-size: 20px;
+   width: 100%;
+   font-size: clamp(8.5px, 8.5px + calc(100vw - 360px) * 0.02818, 20px);
+   line-height: clamp(12px, 12px + calc(100vw - 360px) * 0.024509, 22px);
    font-weight: 400;
-   line-height: 22px;
    white-space: pre-line;
    color: #969696;
 }
@@ -120,10 +132,10 @@ img {
    content: "";
    position: absolute;
    top: 0;
-   right: -35px;
+   right: clamp(-15px, -15px + calc(100vw - 360px) * 0.049019, -35px);
    display: block;
-   width: 8px;
-   height: 64px;
+   width: clamp(6px, 6px + calc(100vw - 360px) * 0.0049019, 8px);
+   height: clamp(44px, 44px + calc(100vw - 360px) * 0.049019, 64px);
    border-radius: 8px;
    background-image: linear-gradient(#888989, #4A4E54);
 }
@@ -133,29 +145,32 @@ img {
 }
 
 .gallery {
-   padding: 20px 57px 22px 12px;
+   padding: 
+   clamp(15px, 15px + calc(100vw - 360px) * 0.012254, 20px) 
+   clamp(27px, 27px + calc(100vw - 360px) * 0.07352, 57px) 
+   clamp(17px, 17px + calc(100vw - 360px) * 0.012254, 22px) 
+   12px
+   ;
 }
 
 .gallery .gallery-content {
-   margin-left: 17px;
    width: 100%;
 }
 
 .gallery .gallery-content .head {
    display: flex;
    justify-content: space-between;
-   margin-bottom: 47px;
+   margin-bottom: clamp(27px, 27px + calc(100vw - 360px) * 0.049019, 47px);
 }
 
 .gallery .head h2 {
    background-color: #171717;
-   width: 149px;
-   height: 62px;
+   width: clamp(61px, 61px + calc(100vw - 360px) * 0.21568, 149px);
+   height: clamp(46px, 46px + calc(100vw - 360px) * 0.039215, 62px);
    box-shadow: 0px 4px 10px 2px #00000040 inset;
    font-family: "Poppins", sans-serif;
    font-weight: 500;
-   font-style: medium;
-   font-size: 20px;
+   font-size: clamp(10px, 10px + calc(100vw - 360px) * 0.029411, 22px);
    line-height: 100%;
    border-radius: 20px;
    align-content: center;
@@ -164,14 +179,19 @@ img {
 }
 
 .gallery .head .arrow {
-   width: 45px;
-   height: 45px;
+   width: clamp(25px, 25px + calc(100vw - 360px) * 0.049019, 45px);
+   height: clamp(25px, 25px + calc(100vw - 360px) * 0.049019, 45px);
    border-radius: 50%;
    box-shadow: 
    4px 5px 30px 5px rgba(16, 18, 19, 1),
    -5px -3px 30px -10px rgba(150, 190, 231, 1);
    border: none;
    background-image: linear-gradient(139.14deg, #303439 12.4%, #161718 94.96%);
+}
+
+.gallery .arrow svg {
+   width: clamp(11px, 11px + calc(100vw - 360px) * 0.014705, 17px);
+   height: clamp(10px, 10px + calc(100vw - 360px) * 0.014705, 16px);
 }
 
 .gallery .head .arrow:hover {
@@ -183,8 +203,9 @@ img {
 }
 
 .add-image {
-   width: 131.32px;
+   width: clamp(77.32px, 77.32px + calc(100vw - 360px) * 0.13235, 131.32px);
    height: 46px;
+   font-size: clamp(9px, 9px + calc(100vw - 360px) * 0.017156, 16px);
    border-radius: 104px;
    color: #ffff;
    background-color: #41474e;
@@ -195,7 +216,15 @@ img {
    0px 0px 48.91px 0px rgba(255, 255, 255, 0.05) inset,
    9px 10px 7.1px 0px rgba(0, 0, 0, 0.4),
    -0.5px -0.5px 6.9px 0px rgba(255, 255, 255, 0.25);
-   margin-right: 36.68px;
+   margin-right: clamp(10.68px, 10.68px + calc(100vw - 360px) * 0.063725, 36.68px);
+}
+
+.add-image:hover {
+   opacity: 0.8;
+}
+
+.add-image:active {
+   background-color: #4d545c;
 }
 
 .control-btns {
@@ -204,7 +233,7 @@ img {
 
 .arrows-btns {
    display: flex;
-   gap: 18px;
+   gap: clamp(5px, 5px + calc(100vw - 360px) * 0.031862, 18px);
 }
 
 .galleryContainer {
@@ -213,16 +242,15 @@ img {
 
 .gallery-images {
    width: 100%;
-   max-width: 612px;
    display: flex;
-   gap: 21px;
+   gap: 3%;
    transition: transform 0.4s ease;
 }
 
 .gallery-images img {
    border-radius: 24px;
-   width: 190px;
-   height: 179px;
+   width: calc(94% / 3);
+   height: auto;
    filter: grayscale(100%);
    flex-shrink: 0;
    transition: filter 0.3s;
